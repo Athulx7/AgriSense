@@ -1,18 +1,21 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSeedling, faUser, faMoon, faSun, faBell, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faSeedling, faUser, faBell, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import DarkModeTogle from './DarkModeTogle'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 function Header() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const location = useLocation()
+
     const toggleMobileMenu = () => {
-        setMobileMenuOpen(!mobileMenuOpen);
+        setMobileMenuOpen(!mobileMenuOpen)
     }
 
-    const navLinkClass = ({ isActive }) =>
-        `transition-colors ${isActive ? "text-green-600 font-semibold" : "text-gray-800 dark:text-gray-200 hover:text-green-600"
-    }`
+    const navLinkClass = (path) => {
+        const isActive = location.pathname === path || location.pathname.startsWith(path + "/")
+        return `transition-colors ${isActive ? "text-green-600 font-semibold" : "text-gray-800 dark:text-gray-200 hover:text-green-600"}`
+    }
 
     return (
         <header className="bg-white dark:bg-gray-900 sticky top-0 z-50">
@@ -25,12 +28,12 @@ function Header() {
                     </NavLink>
 
                     <div className="hidden md:flex items-center space-x-6">
-                        <NavLink to="/" className={navLinkClass}>Dashboard</NavLink>
-                        <NavLink to="/farm-profile" className={navLinkClass}>Farm Profile</NavLink>
-                        <NavLink to="/task-planner" className={navLinkClass}>Task Planner</NavLink>
-                        <NavLink to="/expense-tracker" className={navLinkClass}>Expense Tracker</NavLink>
-                        <NavLink to="/market-prices" className={navLinkClass}>Market Prices</NavLink>
-                        <NavLink to="/ai-assistant" className={navLinkClass}>AI Assistant</NavLink>
+                        <NavLink to="/" className={navLinkClass("/")}>Dashboard</NavLink>
+                        <NavLink to="/farm_profile/overview" className={navLinkClass("/farm_profile")}>Farm Profile</NavLink>
+                        <NavLink to="/task_planner/taskboard" className={navLinkClass("/task_planner")}>Task Planner</NavLink>
+                        <NavLink to="/expense-tracker" className={navLinkClass("/expense-tracker")}>Expense Tracker</NavLink>
+                        <NavLink to="/market-prices" className={navLinkClass("/market-prices")}>Market Prices</NavLink>
+                        <NavLink to="/ai-assistant" className={navLinkClass("/ai-assistant")}>AI Assistant</NavLink>
                     </div>
 
                     <div className="flex items-center space-x-4">
@@ -58,12 +61,12 @@ function Header() {
                 {mobileMenuOpen && (
                     <div className="md:hidden mt-4 py-3 border-t border-green-700">
                         <div className="flex flex-col space-y-3">
-                            <NavLink to="/" className={navLinkClass}>Dashboard</NavLink>
-                            <NavLink to="/farm-profile" className={navLinkClass}>Farm Profile</NavLink>
-                            <NavLink to="/task-planner" className={navLinkClass}>Task Planner</NavLink>
-                            <NavLink to="/expense-tracker" className={navLinkClass}>Expense Tracker</NavLink>
-                            <NavLink to="/market-prices" className={navLinkClass}>Market Prices</NavLink>
-                            <NavLink to="/ai-assistant" className={navLinkClass}>AI Assistant</NavLink>
+                            <NavLink to="/" className={navLinkClass("/")}>Dashboard</NavLink>
+                            <NavLink to="/farm_profile/overview" className={navLinkClass("/farm_profile")}>Farm Profile</NavLink>
+                            <NavLink to="/task_planner/taskboard" className={navLinkClass("/task_planner")}>Task Planner</NavLink>
+                            <NavLink to="/expense-tracker" className={navLinkClass("/expense-tracker")}>Expense Tracker</NavLink>
+                            <NavLink to="/market-prices" className={navLinkClass("/market-prices")}>Market Prices</NavLink>
+                            <NavLink to="/ai-assistant" className={navLinkClass("/ai-assistant")}>AI Assistant</NavLink>
                         </div>
                     </div>
                 )}
