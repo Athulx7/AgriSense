@@ -11,6 +11,14 @@ import MainTaskPlanner from './containers/taskPlanner/MainTaskPlanner'
 import TaskBoard from './Components/taskPlanner/TaskBoard'
 import Calendar from './Components/taskPlanner/Calendar'
 import Analytics from './Components/taskPlanner/Analytics'
+import MainExpenseTracker from './containers/expenseTracker/MainExpenseTracker'
+import ExpensePverView from './Components/expenceTracker/ExpensePverView'
+import ExpCategory from './Components/expenceTracker/ExpCategory'
+import ExpReport from './Components/expenceTracker/ExpReport'
+import MainMarketPrice from './containers/marketPrices/MainMarketPrice'
+import PriceOverView from './Components/marketPrices/PriceOverView'
+import MarketingTrends from './Components/marketPrices/MarketingTrends'
+import MainAiAssistancePage from './containers/AIAsistance/MainAiAssistancePage'
 
 function App() {
   return (
@@ -31,6 +39,23 @@ function App() {
           <Route path="calendar" element={<Calendar />} />
           <Route path="analytics" element={<Analytics />} />
         </Route>
+
+        <Route path="/expense_traacker" element={<MainExpenseTracker />}>
+          <Route path="expOverview" element={<ExpensePverView />} />
+          <Route path="expCategory" element={<ExpCategory />} />
+          <Route path="expReport" element={<ExpReport />} />
+        </Route>
+
+        <Route path="/market_prices" element={<MainMarketPrice />}>
+          <Route path="priceOverview" element={<PriceOverView />} />
+          <Route path="marketTrends" element={<MarketingTrends />} />
+          <Route path="expReport" element={<ExpReport />} />
+        </Route>
+
+
+         <Route path="/AiAssistance" element={<MainAiAssistancePage />} />
+
+
       </Routes>
     </>
   )

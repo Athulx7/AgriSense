@@ -23,7 +23,7 @@ function TaskBoard() {
                     <div className="bg-white dark:bg-gray-900 rounded-xl shadow p-4 mb-4">
                         <div className="flex justify-between items-start">
                             <h3 className="font-semibold">Soil Testing - Field A</h3>
-                            <span className="bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full">
+                            <span className="bg-red-100 dark:bg-red-800 dark:text-red-400 text-red-600 text-xs px-2 py-1 rounded-full">
                                 high
                             </span>
                         </div>
@@ -31,9 +31,9 @@ function TaskBoard() {
                             Conduct pH and nutrient analysis for corn field
                         </p>
                         <div className="flex flex-wrap gap-2 mb-2">
-                            <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">soil</span>
-                            <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">testing</span>
-                            <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">field-a</span>
+                            <span className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 dark:text-blue-400 text-blue-600 rounded-full">soil</span>
+                            <span className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 dark:text-blue-400 text-blue-600 rounded-full">testing</span>
+                            <span className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 dark:text-blue-400 text-blue-600 rounded-full">field-a</span>
                         </div>
                         <p className="text-xs text-gray-500">Due: 2024-06-15</p>
                         <p className="text-xs text-gray-500 mb-2">John Mitchell</p>
@@ -59,7 +59,7 @@ function TaskBoard() {
                     <div className="bg-white dark:bg-gray-900 rounded-xl shadow p-4 mb-4">
                         <div className="flex justify-between items-start">
                             <h3 className="font-semibold">Fertilizer Application</h3>
-                            <span className="bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full">
+                            <span className="bg-red-100 dark:bg-red-800 dark:text-red-400 text-red-600 text-xs px-2 py-1 rounded-full">
                                 high
                             </span>
                         </div>
@@ -67,8 +67,8 @@ function TaskBoard() {
                             Apply NPK fertilizer to soybean fields
                         </p>
                         <div className="flex flex-wrap gap-2 mb-2">
-                            <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">fertilizer</span>
-                            <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">soybeans</span>
+                            <span className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 dark:text-blue-400 text-blue-600 rounded-full">fertilizer</span>
+                            <span className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 dark:text-blue-400 text-blue-600 rounded-full">soybeans</span>
                         </div>
                         <p className="text-xs text-gray-500">Due: 2024-06-14</p>
                         <p className="text-xs text-gray-500 mb-2">Sarah Wilson</p>
@@ -94,7 +94,7 @@ function TaskBoard() {
                     <div className="bg-white dark:bg-gray-900 rounded-xl shadow p-4 mb-4">
                         <div className="flex justify-between items-start">
                             <h3 className="font-semibold">Seed Planting - Wheat</h3>
-                            <span className="bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full">
+                            <span className="bg-red-100 dark:bg-red-800 dark:text-red-400 text-red-600 text-xs px-2 py-1 rounded-full">
                                 high
                             </span>
                         </div>
@@ -102,8 +102,8 @@ function TaskBoard() {
                             Complete wheat seeding in Field C
                         </p>
                         <div className="flex flex-wrap gap-2 mb-2">
-                            <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">planting</span>
-                            <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">wheat</span>
+                            <span className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 dark:text-blue-400 text-blue-600 rounded-full">planting</span>
+                            <span className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 dark:text-blue-400 text-blue-600 rounded-full">wheat</span>
                         </div>
                         <p className="text-xs text-gray-500">Due: 2024-06-10</p>
                         <p className="text-xs text-gray-500 mb-2">John Mitchell</p>
@@ -118,7 +118,7 @@ function TaskBoard() {
                     <div className="bg-white dark:bg-gray-900 rounded-xl shadow p-4 mb-4">
                         <div className="flex justify-between items-start">
                             <h3 className="font-semibold">Seed Planting - Wheat</h3>
-                            <span className="bg-red-100 text-red-600 text-xs px-2 py-1 rounded-full">
+                            <span className="bg-red-100 dark:bg-red-900 dark:text-red-400 text-red-600 text-xs px-2 py-1 rounded-full">
                                 high
                             </span>
                         </div>
@@ -126,8 +126,8 @@ function TaskBoard() {
                             Complete wheat seeding in Field C
                         </p>
                         <div className="flex flex-wrap gap-2 mb-2">
-                            <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">planting</span>
-                            <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">wheat</span>
+                            <span className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 dark:text-blue-400 text-blue-600 rounded-full">planting</span>
+                            <span className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 dark:text-blue-400 text-blue-600 rounded-full">wheat</span>
                         </div>
                         <p className="text-xs text-gray-500">Due: 2024-06-10</p>
                         <p className="text-xs text-gray-500 mb-2">John Mitchell</p>

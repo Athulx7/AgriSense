@@ -31,9 +31,9 @@ function Header() {
                         <NavLink to="/" className={navLinkClass("/")}>Dashboard</NavLink>
                         <NavLink to="/farm_profile/overview" className={navLinkClass("/farm_profile")}>Farm Profile</NavLink>
                         <NavLink to="/task_planner/taskboard" className={navLinkClass("/task_planner")}>Task Planner</NavLink>
-                        <NavLink to="/expense-tracker" className={navLinkClass("/expense-tracker")}>Expense Tracker</NavLink>
-                        <NavLink to="/market-prices" className={navLinkClass("/market-prices")}>Market Prices</NavLink>
-                        <NavLink to="/ai-assistant" className={navLinkClass("/ai-assistant")}>AI Assistant</NavLink>
+                        <NavLink to="/expense_traacker/expOverview" className={navLinkClass("/expense_traacker")}>Expense Tracker</NavLink>
+                        <NavLink to="/market_prices/priceOverview" className={navLinkClass("/market_prices")}>Market Prices</NavLink>
+                        <NavLink to="/AiAssistance" className={navLinkClass("/AiAssistance")}>AI Assistant</NavLink>
                     </div>
 
                     <div className="flex items-center space-x-4">
@@ -64,9 +64,9 @@ function Header() {
                             <NavLink to="/" className={navLinkClass("/")}>Dashboard</NavLink>
                             <NavLink to="/farm_profile/overview" className={navLinkClass("/farm_profile")}>Farm Profile</NavLink>
                             <NavLink to="/task_planner/taskboard" className={navLinkClass("/task_planner")}>Task Planner</NavLink>
-                            <NavLink to="/expense-tracker" className={navLinkClass("/expense-tracker")}>Expense Tracker</NavLink>
-                            <NavLink to="/market-prices" className={navLinkClass("/market-prices")}>Market Prices</NavLink>
-                            <NavLink to="/ai-assistant" className={navLinkClass("/ai-assistant")}>AI Assistant</NavLink>
+                            <NavLink to="/expense_traacker/expOverview" className={navLinkClass("/expense_traacker")}>Expense Tracker</NavLink>
+                            <NavLink to="/market_prices/priceOverview" className={navLinkClass("/market-prices")}>Market Prices</NavLink>
+                            <NavLink to="/AiAssistance" className={navLinkClass("/AiAssistance")}>AI Assistant</NavLink>
                         </div>
                     </div>
                 )}
