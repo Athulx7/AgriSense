@@ -24,7 +24,7 @@ function Header() {
 
                     <NavLink to="/" className="flex items-center space-x-2">
                         <FontAwesomeIcon icon={faSeedling} className="h-6 w-6 text-green-600" />
-                        <span className="text-xl font-bold text-green-600">Agrisense AI</span>
+                        <span className="text-xl font-bold text-green-600">Agrisense</span>
                     </NavLink>
 
                     <div className="hidden md:flex items-center space-x-6">
