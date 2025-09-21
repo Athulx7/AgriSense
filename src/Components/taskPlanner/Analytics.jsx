@@ -34,7 +34,7 @@ function Analytics() {
         {stats.map((stat, idx) => (
           <div
             key={idx}
-            className="rounded-2xl shadow-sm bg-white p-6 flex flex-col items-center justify-center"
+            className="rounded-2xl shadow-sm bg-white dark:bg-gray-800 p-6 flex flex-col items-center justify-center"
           >
             <div className={`p-4 rounded-xl ${stat.color} text-2xl`}>
               <FontAwesomeIcon icon={stat.icon} />
@@ -47,7 +47,7 @@ function Analytics() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Task Completion */}
-        <div className="bg-white rounded-2xl shadow-md p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6">
           <h3 className="text-lg font-semibold mb-4">Task Completion Rate</h3>
           <div className="space-y-4">
             {completionRates.map((item, idx) => {
@@ -73,7 +73,7 @@ function Analytics() {
         </div>
 
         {/* Tasks by Category */}
-        <div className="bg-white rounded-2xl shadow-md p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6">
           <h3 className="text-lg font-semibold mb-4">Tasks by Category</h3>
           <ul className="space-y-2">
             {categories.map((cat, idx) => (
