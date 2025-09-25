@@ -1,17 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
+import DropDownComponent from "../BasicComponents/DropDownComponent";
 
 function PriceOverView() {
+    const [selectedData, setSelectedData] = useState({
+        selectedFinancialYear: "",
+    });
+
+    const selectionDropDown = {
+        financialYear: [
+            {
+                key: "2023-24",
+                text: "Corn (C)",
+                color: "text-green-600 dark:text-green-500",
+                bg: "bg-green-100 dark:bg-green-950",
+                border: "border-green-600 dark:border-green-900",
+            },
+            {
+                key: "2024-25",
+                text: "Soybeans (S)",
+                color: "text-blue-600 dark:text-blue-500",
+                bg: "bg-blue-100 dark:bg-blue-950",
+                border: "border-blue-600 dark:border-blue-900",
+            },
+            {
+                key: "2025-26",
+                text: "Wheat (W)",
+                color: "text-yellow-600 dark:text-yellow-500",
+                bg: "bg-yellow-100 dark:bg-yellow-950",
+                border: "border-yellow-600 dark:border-yellow-900",
+            },
+            {
+                key: "2026-27",
+                text: "Cotton (CT)",
+                color: "text-purple-600 dark:text-purple-500",
+                bg: "bg-purple-100 dark:bg-purple-950",
+                border: "border-purple-600 dark:border-purple-900",
+            },
+        ],
+    };
+
+    const handleSelectDropdownData = (field, value) => {
+        setSelectedData((prev) => ({
+            ...prev,
+            [field]: value,
+        }));
+    };
+
+
     return (
         <div className="p-6">
 
             <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-2">
-                    <select className="border rounded-md p-2">
-                        <option>Corn (C)</option>
-                        <option>Soybeans (S)</option>
-                        <option>Wheat (W)</option>
-                        <option>Cotton (CT)</option>
-                    </select>
+                    <DropDownComponent
+                        labelName="Financial Year"
+                        important
+                        Selected={selectedData.selectedFinancialYear}
+                        dropdownList={selectionDropDown.financialYear}
+                        getValue={(value) => handleSelectDropdownData("selectedFinancialYear", value)}
+                        disabledropdown={""}
+                    />
                     <p className="text-sm text-gray-500">Last updated: 15:30 CT</p>
                 </div>
                 <div className="flex space-x-3">
@@ -74,7 +122,7 @@ function PriceOverView() {
                 </div>
 
                 <div className="space-y-6">
-  
+
                     <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-md">
                         <h3 className="font-semibold mb-3">Market News & Analysis</h3>
                         <ul className="space-y-3 text-sm">

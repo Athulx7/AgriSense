@@ -1,6 +1,6 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSeedling, faUser, faChartLine, faWallet, faMap, faCalendar, faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons"
+import { faSeedling, faMap, faCalendar, faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons"
 
 function MainCardSection() {
     const cards = [
