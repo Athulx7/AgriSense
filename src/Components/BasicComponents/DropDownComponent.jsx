@@ -61,9 +61,9 @@ function DropDownComponent({ labelName, important, Selected, dropdownList, getVa
                                 <div
                                     key={item.key}
                                     onClick={() => {
-                                        getValue(item.key);
-                                        setOpen(false);
-                                        setSearch("");
+                                        getValue(item.key)
+                                        setOpen(false)
+                                        setSearch("")
                                     }}
                                     className={`px-3 py-2 text-sm cursor-pointer hover:bg-green-100 hover:text-green-500 dark:hover:bg-green-700 border-l-4 border-transparent hover:border-green-600 
                                     ${Selected === item.key ? "bg-green-100 text-green-500 dark:text-green-400 border-green-700 dark:bg-green-700" : "text-gray-800 dark:text-white"}`}
